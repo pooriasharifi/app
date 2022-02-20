@@ -5,6 +5,7 @@ import 'package:app/Screans/views/note.dart';
 import 'package:app/Screans/views/profile.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:salomon_bottom_bar/salomon_bottom_bar.dart';
 
 class Menu extends StatefulWidget {
@@ -16,7 +17,7 @@ class Menu extends StatefulWidget {
 
 class _MenuState extends State<Menu> {
   var _currentIndex = 0;
-
+TextStyle _textStyle =TextStyle(fontSize: 13,fontFamily: 'vazir');
   final List<Widget> _children = [
     HomePage(),
     MyDocumentPage(),
@@ -46,35 +47,35 @@ class _MenuState extends State<Menu> {
           //Home
           SalomonBottomBarItem(
               icon: Icon(Icons.home),
-              title: Text('خانه'),
+              title: Text('خانه',style: _textStyle,),
               selectedColor: bl,
               unselectedColor: white,
               activeIcon: Icon(Icons.home_filled)),
           //my Document
           SalomonBottomBarItem(
               icon: Icon(Icons.my_library_books_outlined),
-              title: Text('پرونده های من'),
+              title: Text('پرونده های من',style: _textStyle),
               selectedColor: bl,
               unselectedColor: white,
               activeIcon: Icon(Icons.my_library_books_sharp)),
           //add
           SalomonBottomBarItem(
               icon: Icon(Icons.add_circle_outline),
-              title: Text('افزودن موکل'),
+              title: Text('افزودن موکل',style: _textStyle),
               selectedColor: bl,
               unselectedColor: white,
               activeIcon: Icon(Icons.add_circle_outlined)),
           //note
           SalomonBottomBarItem(
               icon: Icon(Icons.note_outlined),
-              title: Text('یادداشت'),
+              title: Text('یادداشت',style: _textStyle),
               selectedColor: bl,
               unselectedColor: white,
               activeIcon: Icon(Icons.note_rounded)),
           //profile
           SalomonBottomBarItem(
               icon: Icon(Icons.person_outline),
-              title: Text('پروفایل'),
+              title: Text('پروفایل',style: _textStyle),
               selectedColor: bl,
               unselectedColor: white,
               activeIcon: Icon(Icons.person)),

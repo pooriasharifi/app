@@ -45,7 +45,7 @@ dependencies:
   persian_datetime_picker: ^2.4.0
   get: ^4.6.1
   flutter_slidable: ^1.2.0
-
+  avatar_glow: ^2.0.2
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -84,15 +84,27 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
+  fonts:
+   - family: titr
+     fonts:
+       - asset: fonts/Titr.ttf
+   - family: vazir
+     fonts:
+       - asset: fonts/Vazir.ttf
+   - family: ir
+     fonts:
+       - asset: fonts/Ir.ttf
+   - family: kodak
+     fonts:
+       - asset: fonts/Kodak.ttf
   #       - asset: fonts/Schyler-Italic.ttf
   #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
+# - family: vazir
+#   fonts:
+#     - asset: fonts/Vazir.ttf
+# - family:
+#     fonts:
+#         - asset: fonts/Vazir.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
   #         weight: 700
   #

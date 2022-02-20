@@ -25,7 +25,7 @@ class Btn extends StatelessWidget {
       ),
       child: Container(
         alignment: customAlignmentText ? alignmentText:Alignment.center,
-        child: Text(title,style: Get.textTheme.headline2,),
+        child: Text(title,style: hasBorder?Get.textTheme.headline2:Get.textTheme.button,),
       ),
     );
   }

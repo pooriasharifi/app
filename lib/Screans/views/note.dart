@@ -17,7 +17,7 @@ class NotePage extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             'یادداشت ها',
-            style: Get.textTheme.headline2,
+            style: Get.textTheme.headline3,
           ),
           backgroundColor: bg,
           centerTitle: false,

@@ -18,7 +18,7 @@ class MyDocumentPage extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('پرونده های من',style: Get.textTheme.headline2,),
+          title: Text('پرونده های من',style: Get.textTheme.headline3,),
           backgroundColor: bg,
           centerTitle: false,
 

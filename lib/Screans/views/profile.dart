@@ -1,5 +1,6 @@
 import 'package:app/modules/button.dart';
 import 'package:app/modules/constans.dart';
+import 'package:avatar_glow/avatar_glow.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -22,13 +23,25 @@ class ProfilePage extends StatelessWidget {
         initialIndex: 1,
         child: Scaffold(
           appBar: AppBar(
-            title: Text('امیرحسین عباسیان',style: Get.textTheme.headline2,),
+            actions: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20),
+                child: GestureDetector(
+                    onTap: (){
+                      Get.toNamed('/messages');
+                    },
+                    child: Icon(Icons.mark_chat_unread_outlined)),
+              )
+            ],
+            title: Container(
+
+                child: Text('امیرحسین عباسیان',style: Get.textTheme.headline3,)),
             backgroundColor: bg,
             centerTitle: false,
 
           ),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 30),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.end,
 
@@ -56,14 +69,28 @@ class ProfilePage extends StatelessWidget {
                   Stack(
                     alignment: Alignment.bottomRight,
                      children: [
-                       CircleAvatar(
-                         backgroundColor: borderTextFeild,
-                         maxRadius: 50,
-                         child: Text('A',style: Get.textTheme.headline2,),
+                       AvatarGlow(
+                         endRadius: 60,
+                          repeat: true,
+                         showTwoGlows: true,
+                         // duration: Duration(seconds: 30),
+                         glowColor: white,
+                         repeatPauseDuration: Duration(milliseconds: 5),
+                         child: Material(
+                           elevation: 20,
+                           shape: CircleBorder(),
+                           child: CircleAvatar(
+                             radius:35,
+                             backgroundColor: borderTextFeild,
+                             // maxRadius: 50,
+                             child: Text('A',style: Get.textTheme.headline2,),
+                           ),
+                         ),
                        ),
                        Positioned(
-                           right: -60,
+                           right: -45,
                            left: 0,
+                           bottom: 15,
                            child: GestureDetector(
                                onTap: (){
                                  print( Get.height*.4);

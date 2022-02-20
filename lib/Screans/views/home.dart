@@ -19,7 +19,13 @@ class HomePage extends StatelessWidget {
       textDirection: TextDirection.rtl,
       child: Scaffold(
         appBar: AppBar(
-          title: Text('وکیل یار',style: Get.textTheme.headline2,),
+          toolbarHeight: Get.height*.15,
+          title: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20),
+            child: Text('وکیل یار',style: Get.textTheme.headline1!.copyWith(
+              fontSize: 50
+            ),),
+          ),
           backgroundColor: bg,
           centerTitle: false,
 
