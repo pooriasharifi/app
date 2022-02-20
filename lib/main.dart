@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       // darkTheme: ThemeData.dark(),
       theme: ThemeData(
         scaffoldBackgroundColor: Color(0xFF000000),
-        primaryColor: Color(0xFF0096F7),
+        primaryColor: Color(0xFF13DA9E),
         textTheme: TextTheme(
           subtitle1: TextStyle(fontSize: 18,color: itemTextFeild.withOpacity(1)),
           headline1: TextStyle(fontSize: 70,color: Colors.white),

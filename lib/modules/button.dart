@@ -5,21 +5,23 @@ import 'package:get/get.dart';
 
 
 class Btn extends StatelessWidget {
-  const Btn({Key? key,this.alignmentText,this.customAlignmentText=false,this.hasBorder,this.title}) : super(key: key);
+  const Btn({Key? key,this.alignmentText,this.customAlignmentText=false,this.hasBorder,this.title,this.customHeightSize,this.customHeight=false}) : super(key: key);
   final hasBorder;
   final customAlignmentText;
   final alignmentText;
   final title;
+  final customHeight;
+  final customHeightSize;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: customHeight ? customHeightSize:60,
       width: Get.width-30 ,
       decoration: BoxDecoration(
         color: hasBorder?bg:bl,
         borderRadius: BorderRadius.circular(10),
-        border: hasBorder ? Border.all(color: bl):Border.fromBorderSide(BorderSide.none)
+        border: hasBorder ? Border.all(color: itemTextFeild):Border.fromBorderSide(BorderSide.none)
       ),
       child: Container(
         alignment: customAlignmentText ? alignmentText:Alignment.center,

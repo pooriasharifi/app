@@ -14,7 +14,10 @@ class TxtFeild extends StatelessWidget {
       this.styleTextStyleTextForm,
       this.suffixIcon,
       this.textInputAction,
-      this.validator})
+      this.validator,
+  this.wi,
+  this.customWidthSize=false,
+  this.he})
       : super(key: key);
   final keyboadtype;
   final textInputAction;
@@ -26,12 +29,14 @@ class TxtFeild extends StatelessWidget {
   final labelText;
   final prefixIcon;
   final suffixIcon;
-
+  final customWidthSize;
+  final he;
+  final wi;
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 60,
-      width: Get.width - 30,
+      width: customWidthSize? wi:Get.width - 30,
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: TextFormField(

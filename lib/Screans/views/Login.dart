@@ -54,7 +54,9 @@ class LoginPage extends StatelessWidget {
             ),
           ),
           GestureDetector(
-              onTap: ()=>Get.offNamed('/menu'),
+              onTap: (){Get.offNamed('/menu');
+                Get.snackbar('title', 'ورود با موفقیت انجام شد',backgroundColor: Colors.green,);
+                },
               child: Container(child: const Btn(title: 'ورود',hasBorder: false,))),
           Spacer(),
           Container(
