@@ -8,7 +8,10 @@ class EditProfile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: _buildBody());
+    return SafeArea(
+
+        bottom: false,
+        child: _buildBody());
   }
 
  Widget _buildBody() {

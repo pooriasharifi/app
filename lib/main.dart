@@ -6,10 +6,12 @@ import 'package:app/Screans/views/profile/editeProfile.dart';
 import 'package:app/Screans/views/profile/messages.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 void main() {
   runApp(const MyApp());
+  SystemChrome.setEnabledSystemUIOverlays([]);
 }
 
 class MyApp extends StatelessWidget {

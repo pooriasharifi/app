@@ -12,7 +12,9 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: _buildBody());
+    return SafeArea(
+
+        child: _buildBody());
   }
 
   Widget _buildBody() {
