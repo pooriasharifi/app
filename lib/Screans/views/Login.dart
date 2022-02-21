@@ -41,6 +41,7 @@ class LoginPage extends StatelessWidget {
           Form(
               child: TxtFeild(
             labelText: 'رمز عبور',
+            maxLines: 1,
             obscureText: true,
             suffixIcon: Icons.remove_red_eye,
             prefixIcon: Icons.lock_outline,

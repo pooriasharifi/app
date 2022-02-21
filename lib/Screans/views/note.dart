@@ -1,5 +1,8 @@
+import 'package:app/modules/button.dart';
 import 'package:app/modules/constans.dart';
+import 'package:app/modules/textfeilds.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
 class NotePage extends StatelessWidget {
@@ -62,11 +65,99 @@ class NotePage extends StatelessWidget {
           elevation: 20,
           backgroundColor: bl,
           splashColor: white,
-          onPressed: () {},
+          onPressed: () {
+            Get.defaultDialog(
+              title: 'افزودن یادداشت',
+              titleStyle: Get.textTheme.headline2,
+              backgroundColor: borderTextFeild,
+              barrierDismissible: false,
+
+              radius: 10,
+              content: Column(
+                children: [
+                TxtFeild(
+                          labelText: 'تیتر',
+                          obscureText: false,
+                  textInputAction: TextInputAction.next,
+                  
+                        ),
+                        SizedBox(height: 10,),
+              TxtFeild(
+                customHeightSize: true,
+                he: Get.height/6,
+                maxLines: 5,
+                labelText: 'متن',
+                obscureText: false,
+                textInputAction: TextInputAction.newline,
+              ),
+                  SizedBox(height: 10,),
+                  Row(
+
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      GestureDetector(
+                        onTap: ()=>Get.back(),
+                        child: Btn(
+                          customWidth: true,
+                          customWidthtSize: Get.width*.3,
+                          hasBorder: true,
+                          title: 'صرف نظر',
+                        ),
+                      ),
+                      SizedBox(width: 10,),
+                      Btn(
+                        customWidth: true,
+                        customWidthtSize: Get.width*.3,
+                        hasBorder: false,
+                        title: 'افزودن',
+                      ),
+                    ],
+                  )
+                ],
+              )
+
+                // ClipRRect(
+                //   borderRadius: BorderRadius.vertical(top: Radius.circular(25)),
+                //   child: Container(
+                //
+                //     color: borderTextFeild,
+                //     height: 300,
+                //     width: Get.width,
+                //     child: Column(
+                //       children: [
+                //         Container(
+                //           margin: EdgeInsets.symmetric(vertical: 10),
+                //           width: 50,
+                //           height: 2,
+                //           color: white,
+                //         ),
+                //         TxtFeild(
+                //           labelText: 'تیتر',
+                //           obscureText: false,
+                //
+                //         ),
+                //         SizedBox(height: 10,)
+                //         ,
+                //         Wrap(
+                //           children: [
+                //             TxtFeild(
+                //               labelText: 'تیتر',
+                //               obscureText: false,
+                //
+                //             ),
+                //           ],
+                //         ),
+                //       ],
+                //     ),
+                //   ),
+                // )
+            );
+          },
           child: Icon(
             Icons.add,
             color: bg,
           ),
+
         ),
       ),
     );

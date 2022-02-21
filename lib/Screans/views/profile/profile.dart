@@ -1,3 +1,4 @@
+import 'package:app/Screans/views/profile/messages.dart';
 import 'package:app/modules/button.dart';
 import 'package:app/modules/constans.dart';
 import 'package:avatar_glow/avatar_glow.dart';
@@ -40,100 +41,108 @@ class ProfilePage extends StatelessWidget {
             centerTitle: false,
 
           ),
-        body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 30),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.end,
+        body:
+       PageView(
+         children: [
 
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
-                      Column(children: [
-                        Text('مانده بدهی',style: Get.textTheme.headline2,),
-                        SizedBox(height: 10,),
-                        Text('۲,۵۰۰,۰۰۰',style: Get.textTheme.subtitle1,),
-                        SizedBox(height: 10,),
-                      ],),
-                      SizedBox(width: 25,),
-                      Column(children: [
-                        Text('اشخاص',style: Get.textTheme.headline2,),
-                        SizedBox(height: 10,),
-                        Text('۱۲',style: Get.textTheme.subtitle1,),
-                        SizedBox(height: 10,),
-                      ],)
-                    ],
-                  ),
-                  Stack(
-                    alignment: Alignment.bottomRight,
-                     children: [
-                       AvatarGlow(
-                         endRadius: 60,
-                          repeat: true,
-                         showTwoGlows: true,
-                         // duration: Duration(seconds: 30),
-                         glowColor: white,
-                         repeatPauseDuration: Duration(milliseconds: 5),
-                         child: Material(
-                           elevation: 20,
-                           shape: CircleBorder(),
-                           child: CircleAvatar(
-                             radius:35,
-                             backgroundColor: borderTextFeild,
-                             // maxRadius: 50,
-                             child: Text('A',style: Get.textTheme.headline2,),
+           Padding(
+             padding: const EdgeInsets.symmetric(horizontal: 10,vertical: 30),
+             child: Column(
+               crossAxisAlignment: CrossAxisAlignment.end,
+
+               children: [
+                 Row(
+                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                   children: [
+                     Row(
+                       children: [
+                         Column(children: [
+                           Text('مانده بدهی',style: Get.textTheme.headline2,),
+                           SizedBox(height: 10,),
+                           Text('۲,۵۰۰,۰۰۰',style: Get.textTheme.subtitle1,),
+                           SizedBox(height: 10,),
+                         ],),
+                         SizedBox(width: 25,),
+                         Column(children: [
+                           Text('اشخاص',style: Get.textTheme.headline2,),
+                           SizedBox(height: 10,),
+                           Text('۱۲',style: Get.textTheme.subtitle1,),
+                           SizedBox(height: 10,),
+                         ],)
+                       ],
+                     ),
+                     Stack(
+                       alignment: Alignment.bottomRight,
+                       children: [
+                         AvatarGlow(
+                           endRadius: 60,
+                           repeat: true,
+                           showTwoGlows: true,
+                           // duration: Duration(seconds: 30),
+                           glowColor: white,
+                           repeatPauseDuration: Duration(milliseconds: 5),
+                           child: Material(
+                             elevation: 20,
+                             shape: CircleBorder(),
+                             child: CircleAvatar(
+                               radius:35,
+                               backgroundColor: borderTextFeild,
+                               // maxRadius: 50,
+                               child: Text('A',style: Get.textTheme.headline2,),
+                             ),
                            ),
                          ),
-                       ),
-                       Positioned(
-                           right: -45,
-                           left: 0,
-                           bottom: 15,
-                           child: GestureDetector(
-                               onTap: (){
-                                 print( Get.height*.4);
-                               },
-                               child: Icon(Icons.add_circle,color: bl,)))
-                     ],
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: 30,
-              ),
-              Stack(
-                alignment: Alignment.centerRight,
-                children: [
-                  Btn(hasBorder: true,title: 'ویرایش پروفایل',customHeightSize:Get.height*.05,customHeight: true,),
-                  Padding(
-                    padding: const EdgeInsets.all(8.0),
-                    child: Icon(Icons.edit,color: itemTextFeild,),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              TabBar(tabs: _buildTab(),
-              automaticIndicatorColorAdjustment: true,
-                indicatorColor: bl,
-                labelColor: bl,
+                         Positioned(
+                             right: -40,
+                             left: 0,
+                             bottom: 20,
+                             child: GestureDetector(
+                                 onTap: (){
+                                   print( Get.height*.4);
+                                 },
+                                 child: Icon(Icons.add_circle,color: bl,)))
+                       ],
+                     ),
+                   ],
+                 ),
+                 SizedBox(
+                   height: 30,
+                 ),
+                 Stack(
+                   alignment: Alignment.centerRight,
+                   children: [
+                     Btn(hasBorder: true,title: 'ویرایش پروفایل',customHeightSize:Get.height*.05,customHeight: true,),
+                     Padding(
+                       padding: const EdgeInsets.all(8.0),
+                       child: Icon(Icons.edit,color: itemTextFeild,),
+                     )
+                   ],
+                 ),
+                 SizedBox(
+                   height: 20,
+                 ),
+                 TabBar(tabs: _buildTab(),
+                   automaticIndicatorColorAdjustment: true,
+                   indicatorColor: bl,
+                   labelColor: bl,
 
-                unselectedLabelColor: itemTextFeild,
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              Expanded(child: TabBarView(children: [
-                userItem(),messageItem()
-              ]))
+                   unselectedLabelColor: itemTextFeild,
+                 ),
+                 SizedBox(
+                   height: 25,
+                 ),
+                 Expanded(child: TabBarView(children: [
+                   userItem(),messageItem()
+                 ]))
 
-            ],
+               ],
 
-          ),
-        ),
+             ),
+           ),
+           MessagesPage()
+         ],
+
+       )
         ),
       ),
     );
@@ -247,7 +256,7 @@ class ProfilePage extends StatelessWidget {
                             Stack(
                               alignment: Alignment.centerRight,
                               children: [
-                                Btn(hasBorder: true,title: 'ویرایش پروفایل',customHeightSize:Get.height*.05,customHeight: true,),
+                                Btn(hasBorder: true,title: 'افزودن کاربر',customHeightSize:Get.height*.05,customHeight: true,),
                                 Padding(
                                   padding: const EdgeInsets.all(8.0),
                                   child: Icon(Icons.person_add,color: white,),

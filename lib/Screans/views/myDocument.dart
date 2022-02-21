@@ -24,6 +24,7 @@ class MyDocumentPage extends StatelessWidget {
 
         ),
         floatingActionButton: FloatingActionButton(
+          splashColor: white,
           backgroundColor: bl,
           onPressed: (){
             Get.bottomSheet(

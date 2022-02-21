@@ -1,7 +1,7 @@
 import 'package:app/Screans/controllers/menu.dart';
 import 'package:app/Screans/views/Login.dart';
 import 'package:app/Screans/views/Splash.dart';
-import 'package:app/Screans/views/messages.dart';
+import 'package:app/Screans/views/profile/messages.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,7 +30,18 @@ class MyApp extends StatelessWidget {
               headline1: TextStyle(
                   fontSize: 105, color: Colors.white, fontFamily: 'ir'),
               bodyText1: TextStyle(
-                  fontSize: 16, color: bl.withOpacity(1), fontFamily: 'vazir'),
+                  fontSize: 16, color: bl.withOpacity(1), fontFamily: 'vazir',shadows: <Shadow>[
+                Shadow(
+                  offset: Offset(0, 0),
+                  blurRadius: 3.0,
+                  color: white.withOpacity(1),
+                ),
+                Shadow(
+                  offset: Offset(0, 0),
+                  blurRadius: 8.0,
+                  color: bl.withOpacity(1),
+                ),
+              ],),
               headline2: TextStyle(
                   fontSize: 16, color: Colors.white, fontFamily: 'vazir'),
               headline3: TextStyle(

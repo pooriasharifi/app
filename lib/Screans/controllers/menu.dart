@@ -2,7 +2,7 @@ import 'package:app/Screans/views/addPerson.dart';
 import 'package:app/Screans/views/home.dart';
 import 'package:app/Screans/views/myDocument.dart';
 import 'package:app/Screans/views/note.dart';
-import 'package:app/Screans/views/profile.dart';
+import 'package:app/Screans/views/profile/profile.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

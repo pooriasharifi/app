@@ -1,5 +1,3 @@
-
-
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -30,7 +28,41 @@ class HomePage extends StatelessWidget {
           centerTitle: false,
 
         ),
+        body: Column(
+          children: [
+            Center(
+              child: FlatButton(
+                  color: bl,
+                  hoverColor: bl,
+                  splashColor: bl,
+                  onPressed: (){
+                    Get.snackbar('title', 'message',backgroundColor: bottomSheet,
+                    overlayBlur: 5,
 
+                    );
+                  }, child: Text('sdgvsdgvsgd',style: TextStyle(color: white),)),
+
+            ),
+            Center(
+              child: FlatButton(
+                  color: bl,
+                  hoverColor: bl,
+                  splashColor: bl,
+                  onPressed: (){
+                    Get.snackbar('title', 'message',
+                        backgroundColor: bg,
+                      overlayColor: white.withOpacity(.5),
+                      overlayBlur: 5,
+                      snackPosition: SnackPosition.BOTTOM,
+                      mainButton: TextButton(onPressed: (){}, child: Text('data')),
+                      animationDuration: Duration(milliseconds: 400),
+                      icon: Icon(Icons.warning,color: Colors.yellow,)
+                    );
+                  }, child: Text('sdgvsdgvsgd',style: TextStyle(color: white),)),
+
+            ),
+          ],
+        ),
       ),
     );
  }

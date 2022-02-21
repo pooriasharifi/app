@@ -15,9 +15,14 @@ class TxtFeild extends StatelessWidget {
       this.suffixIcon,
       this.textInputAction,
       this.validator,
+        this.maxLines,
   this.wi,
   this.customWidthSize=false,
-  this.he})
+  this.he,
+        this.minLine,
+        this.customHeightSize=false
+
+      })
       : super(key: key);
   final keyboadtype;
   final textInputAction;
@@ -30,17 +35,22 @@ class TxtFeild extends StatelessWidget {
   final prefixIcon;
   final suffixIcon;
   final customWidthSize;
+  final customHeightSize;
   final he;
   final wi;
+  final maxLines;
+  final minLine;
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 60,
+      height: customHeightSize?he:60,
       width: customWidthSize? wi:Get.width - 30,
       child: Directionality(
         textDirection: TextDirection.rtl,
         child: TextFormField(
+          cursorColor: bl,
           autofocus: false,
+          maxLines: maxLines,
           keyboardType: keyboadtype,
           textInputAction: textInputAction,
           onSaved: onSaved,
