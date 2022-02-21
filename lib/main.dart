@@ -1,6 +1,8 @@
 import 'package:app/Screans/controllers/menu.dart';
 import 'package:app/Screans/views/Login.dart';
 import 'package:app/Screans/views/Splash.dart';
+import 'package:app/Screans/views/profile/addUser.dart';
+import 'package:app/Screans/views/profile/editeProfile.dart';
 import 'package:app/Screans/views/profile/messages.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
@@ -84,6 +86,14 @@ class MyApp extends StatelessWidget {
             name: '/messages',
             page: () => MessagesPage(),
             transition: Transition.leftToRightWithFade),
+        GetPage(
+            name: '/editProfile',
+            page: () => EditProfile(),
+            ),
+        GetPage(
+            name: '/addUser',
+            page: () => AddUser(),
+            ),
       ],
 
       home: SplashPage(),
