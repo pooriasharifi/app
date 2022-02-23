@@ -1,4 +1,5 @@
 import 'package:app/modules/constans.dart';
+import 'package:app/modules/snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -36,11 +37,8 @@ class HomePage extends StatelessWidget {
                   hoverColor: bl,
                   splashColor: bl,
                   onPressed: (){
-                    Get.snackbar('title', 'message',backgroundColor: bottomSheet,
-                    overlayBlur: 5,
-
-                    );
-                  }, child: Text('sdgvsdgvsgd',style: TextStyle(color: white),)),
+                    Snack().topSnack(messageText: 'asdvsdvsdv',icon: Icons.ac_unit,iconColor: Colors.red);
+                    }, child: Text('sdgvsdgvsgd',style: TextStyle(color: white),)),
 
             ),
             Center(
@@ -49,15 +47,7 @@ class HomePage extends StatelessWidget {
                   hoverColor: bl,
                   splashColor: bl,
                   onPressed: (){
-                    Get.snackbar('title', 'message',
-                        backgroundColor: bg,
-                      overlayColor: white.withOpacity(.5),
-                      overlayBlur: 5,
-                      snackPosition: SnackPosition.BOTTOM,
-                      mainButton: TextButton(onPressed: (){}, child: Text('data')),
-                      animationDuration: Duration(milliseconds: 400),
-                      icon: Icon(Icons.warning,color: Colors.yellow,)
-                    );
+                  Snack().bottomSnack(messageText: 'asdvsdvsdv',icon: Icons.ac_unit,iconColor: Colors.red);
                   }, child: Text('sdgvsdgvsgd',style: TextStyle(color: white),)),
 
             ),
