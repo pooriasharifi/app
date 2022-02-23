@@ -1,6 +1,10 @@
 import 'package:app/Screans/controllers/menu.dart';
 import 'package:app/Screans/views/Login.dart';
 import 'package:app/Screans/views/Splash.dart';
+import 'package:app/Screans/views/home/accountBalance.dart';
+import 'package:app/Screans/views/home/archive.dart';
+import 'package:app/Screans/views/home/setting.dart';
+import 'package:app/Screans/views/home/textEditor.dart';
 import 'package:app/Screans/views/profile/addUser.dart';
 import 'package:app/Screans/views/profile/editeProfile.dart';
 import 'package:app/Screans/views/profile/messages.dart';
@@ -9,6 +13,8 @@ import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
+
+import 'Screans/views/home/links.dart';
 
 void main() {
   runApp(const MyApp());
@@ -100,6 +106,26 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/welcom',
             page: () => WelcomPage(),
+            ),
+        GetPage(
+            name: '/archive',
+            page: () => ArchivePage(),
+            ),
+        GetPage(
+            name: '/links',
+            page: () => LinksPage(),
+            ),
+        GetPage(
+            name: '/textEditor',
+            page: () => TextEditorPage(),
+            ),
+        GetPage(
+            name: '/setting',
+            page: () => SettingPage(),
+            ),
+        GetPage(
+            name: '/accountBalance',
+            page: () => AccountBalancePage(),
             ),
       ],
 

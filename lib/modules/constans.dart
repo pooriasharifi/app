@@ -8,3 +8,5 @@ Color borderTextFeild = Color(0xFF4C4A4A);
 Color itemTextFeild = Color(0xFF978A8A);
 Color white = Color(0xFFFFFFFF);
 Color bottomSheet = Color(0xFFA0852E);
+Color drawer = Color(0xFF3A3939);
+
