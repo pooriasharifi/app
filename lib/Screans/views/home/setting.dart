@@ -1,15 +1,18 @@
-import 'package:app/Screans/controllers/drawerController.dart';
+import 'package:app/Screans/controllers/homeController.dart';
+import 'package:app/Screans/views/home/drawerView.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-
-class SettingPage extends StatelessWidget {
-  const SettingPage({Key? key}) : super(key: key);
-
+class SettingPage extends GetView<HomeController>{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(child: _buildBody());
+  }
+
+ Widget _buildBody() {
+    return       Scaffold(
+
       drawer: CustomDrawer(),
       appBar: AppBar(
         leading: Builder(
@@ -42,5 +45,7 @@ class SettingPage extends StatelessWidget {
       ),
 
     );
-  }
+
+ }
+
 }

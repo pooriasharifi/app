@@ -1,16 +1,18 @@
 import 'package:app/Screans/controllers/drawerController.dart';
+import 'package:app/Screans/controllers/homeController.dart';
+import 'package:app/Screans/views/home/drawerView.dart';
 import 'package:app/modules/constans.dart';
 import 'package:app/modules/snackbar.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
-
+class HomePage extends GetView<HomeController>{
   @override
   Widget build(BuildContext context) {
-    return SafeArea(child: _buildBody());
+    return  SafeArea(child: _buildBody());
   }
+
+
 
   Widget _buildBody() {
     var controller = Get.put(DrawerControllerCustom());

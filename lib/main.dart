@@ -1,3 +1,4 @@
+import 'package:app/Screans/binding/homeBinding.dart';
 import 'package:app/Screans/controllers/menu.dart';
 import 'package:app/Screans/views/Login.dart';
 import 'package:app/Screans/views/Splash.dart';
@@ -14,6 +15,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
+import 'Screans/views/home/home.dart';
 import 'Screans/views/home/links.dart';
 
 void main() {
@@ -126,6 +128,11 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/accountBalance',
             page: () => AccountBalancePage(),
+            ),
+        GetPage(
+            name: '/home',
+            page: () => HomePage(),
+          binding: HomeBinding()
             ),
       ],
 

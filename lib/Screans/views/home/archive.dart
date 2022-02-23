@@ -1,14 +1,19 @@
 import 'package:app/Screans/controllers/drawerController.dart';
+import 'package:app/Screans/controllers/homeController.dart';
+import 'package:app/Screans/views/home/drawerView.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class ArchivePage extends StatelessWidget {
-  const ArchivePage({Key? key}) : super(key: key);
-
+class ArchivePage extends GetView<HomeController>{
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return SafeArea(child: _builBody());
+  }
+
+ Widget _builBody() {
+    return    Scaffold(
+
       drawer: CustomDrawer(),
       appBar: AppBar(
         leading: Builder(
@@ -51,5 +56,6 @@ class ArchivePage extends StatelessWidget {
         centerTitle: false,
       ),
     );
-  }
+ }
+
 }
