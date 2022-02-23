@@ -4,6 +4,7 @@ import 'package:app/Screans/views/Splash.dart';
 import 'package:app/Screans/views/profile/addUser.dart';
 import 'package:app/Screans/views/profile/editeProfile.dart';
 import 'package:app/Screans/views/profile/messages.dart';
+import 'package:app/Screans/views/welcom/welcom.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -68,7 +69,7 @@ class MyApp extends StatelessWidget {
           overline: TextStyle(
               fontSize: 10, color: bl.withOpacity(1), fontFamily: 'vazir'),
             button: TextStyle(
-                fontSize: 18, color: bg, fontFamily: 'titr'),
+                fontSize: 18, color: bg, fontFamily: 'titr',),
           ),
       ),
       title: 'Flutter Demo',
@@ -95,6 +96,10 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/addUser',
             page: () => AddUser(),
+            ),
+        GetPage(
+            name: '/welcom',
+            page: () => WelcomPage(),
             ),
       ],
 

@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 
 
 class SplashController extends GetxController{
+  bool firstLogin = true;
 @override
   void onInit() {
     // TODO: implement onInit
@@ -12,7 +13,13 @@ class SplashController extends GetxController{
   }
   void _handleScrean()async{
     await Future.delayed(Duration(seconds: 3));
-    Get.offNamed('/login');
+    if (firstLogin==true){
+      Get.offNamed('/welcom');
+    }else{
+      Get.offNamed('/login');
+
+    }
+
   }
 
 }
