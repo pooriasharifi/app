@@ -14,7 +14,7 @@ class SplashController extends GetxController{
   void _handleScrean()async{
     await Future.delayed(Duration(seconds: 3));
     if (firstLogin==true){
-      Get.offNamed('/welcom');
+      Get.offNamed('/menu');
     }else{
       Get.offNamed('/login');
 

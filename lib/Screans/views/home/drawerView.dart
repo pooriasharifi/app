@@ -129,15 +129,16 @@ class CustomDrawer extends StatelessWidget {
 
   navigate(int index){
     switch (index){
-      case 0 :{Get.toNamed('/archive');}
+      case 0 :{Get.offAllNamed('/archive');}
       break;
-      case 1 :{Get.toNamed('/links');}
+      case 1 :{Get.offAllNamed('/links');
+      }
       break;
-      case 2 :{Get.toNamed('/textEditor');}
+      case 2 :{Get.offAllNamed('/textEditor');}
       break;
-      case 3 :{Get.toNamed('/setting');}
+      case 3 :{Get.offAllNamed('/setting');}
       break;
-      case 4 :{Get.toNamed('/accountBalance');}
+      case 4 :{Get.offAllNamed('/accountBalance');}
 
       break;
     }

@@ -1,5 +1,5 @@
-import 'package:app/Screans/controllers/drawerController.dart';
-import 'package:app/Screans/controllers/homeController.dart';
+import 'package:app/Screans/controllers/home/drawerController.dart';
+import 'package:app/Screans/controllers/home/homeController.dart';
 import 'package:app/Screans/views/home/drawerView.dart';
 import 'package:app/modules/constans.dart';
 import 'package:app/modules/snackbar.dart';

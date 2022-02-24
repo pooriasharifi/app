@@ -1,7 +1,7 @@
-import 'package:app/Screans/views/addPerson.dart';
+import 'package:app/Screans/views/addPerson/addPerson.dart';
 import 'package:app/Screans/views/home/home.dart';
-import 'package:app/Screans/views/myDocument.dart';
-import 'package:app/Screans/views/note.dart';
+import 'package:app/Screans/views/myDocument/myDocument.dart';
+import 'package:app/Screans/views/note/note.dart';
 import 'package:app/Screans/views/profile/profile.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
@@ -85,3 +85,7 @@ TextStyle _textStyle =TextStyle(fontSize: 13,fontFamily: 'vazir');
     ));
   }
 }
+
+
+
+

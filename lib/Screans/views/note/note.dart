@@ -5,8 +5,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:get/get.dart';
 
-class NotePage extends StatelessWidget {
-  const NotePage({Key? key}) : super(key: key);
+class NotePage extends GetView {
+
 
   @override
   Widget build(BuildContext context) {

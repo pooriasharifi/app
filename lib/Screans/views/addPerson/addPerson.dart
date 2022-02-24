@@ -4,8 +4,7 @@ import 'package:app/modules/textfeilds.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class AddPersonPage extends StatelessWidget {
-  const AddPersonPage({Key? key}) : super(key: key);
+class AddPersonPage extends GetView {
 
   @override
   Widget build(BuildContext context) {

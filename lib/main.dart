@@ -1,5 +1,5 @@
-import 'package:app/Screans/binding/homeBinding.dart';
-import 'package:app/Screans/controllers/menu.dart';
+import 'package:app/Screans/binding/menuBinding.dart';
+import 'package:app/modules/menu.dart';
 import 'package:app/Screans/views/Login.dart';
 import 'package:app/Screans/views/Splash.dart';
 import 'package:app/Screans/views/home/accountBalance.dart';
@@ -91,6 +91,7 @@ class MyApp extends StatelessWidget {
         ),
         GetPage(
           name: '/menu',
+          binding: MenuBinding(),
           page: () => Menu(),
         ),
         GetPage(
@@ -128,12 +129,9 @@ class MyApp extends StatelessWidget {
         GetPage(
             name: '/accountBalance',
             page: () => AccountBalancePage(),
+
             ),
-        GetPage(
-            name: '/home',
-            page: () => HomePage(),
-          binding: HomeBinding()
-            ),
+
       ],
 
       home: SplashPage(),

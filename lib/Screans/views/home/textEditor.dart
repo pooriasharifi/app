@@ -1,20 +1,29 @@
-import 'package:app/Screans/controllers/homeController.dart';
+import 'package:app/Screans/controllers/home/homeController.dart';
+import 'package:app/Screans/controllers/home/textEditorController.dart';
 import 'package:app/Screans/views/home/drawerView.dart';
 import 'package:app/modules/constans.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class TextEditorPage extends GetView<HomeController> {
+class TextEditorPage extends GetView<TextEditorController> {
+
   @override
   Widget build(BuildContext context) {
     return SafeArea(child: _buildBody());
   }
 
   Widget _buildBody() {
+    Get.put(TextEditorController());
     return Scaffold(
+      floatingActionButton: FloatingActionButton(
+          backgroundColor: bl,
+          child: Icon(Icons.home, color: bg,),
+          onPressed: ()=>Get.offAllNamed('menu')),
 
       drawer: CustomDrawer(),
-      appBar: AppBar(
+      appBar: AppBar(actions: [
+        Icon(Icons.text_snippet_outlined, color: white,)
+      ],
         leading: Builder(
           builder: (BuildContext context) {
             return IconButton(
@@ -37,7 +46,7 @@ class TextEditorPage extends GetView<HomeController> {
           child: Align(
             alignment: Alignment.centerRight,
             child: Text(
-              'بایگانی',
+              '${controller.title}',
               style: Get.textTheme.headline3,
             ),
           ),

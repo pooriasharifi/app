@@ -4,8 +4,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
-class MyDocumentPage extends StatelessWidget {
-  const MyDocumentPage({Key? key}) : super(key: key);
+class MyDocumentPage extends GetView {
+
 
   @override
   Widget build(BuildContext context) {
